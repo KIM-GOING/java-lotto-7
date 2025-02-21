@@ -3,17 +3,17 @@ package lotto.view;
 import camp.nextstep.edu.missionutils.Console;
 import java.lang.String;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.List;
 
 public class InputLotto {
 
     // 당첨 번호 입력
-    public ArrayList<Integer> getLotto() {
+    public List<Integer> getLotto() {
         while(true) { // 예외 발생 시 반복적인 입력을 받기 위한 반복문
             try {
                 System.out.println("Please enter a lotto numbers.");
-                String strlotto = Console.readLine();
-                ArrayList<Integer> lotto = checkLotto(strlotto);
+                String strLotto = Console.readLine();
+                List<Integer> lotto = checkLotto(strLotto);
                 return lotto;
             }
 
@@ -30,8 +30,8 @@ public class InputLotto {
     }
 
     // 올바른 입력 체크 함수
-    public ArrayList<Integer> checkLotto(String lotto) {
-        ArrayList<Integer> arrLotto = new ArrayList<Integer>();
+    public List<Integer> checkLotto(String lotto) {
+        List<Integer> arrLotto = new ArrayList<Integer>();
 
         // 구분자(,)를 기준으로 문자열 자르기
         String[] strLotto = lotto.split(",");

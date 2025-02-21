@@ -27,11 +27,10 @@ public class InputMoney {
     }
 
     // 1000원으로 나누어 떨어지지 않는 입력 체크 함수
-    public int checkMoney(int money) {
+    public void checkMoney(int money) {
         int value = money % 1000;
         if(value != 0) {
             throw new IllegalArgumentException();
         }
-        return value;
     }
 }

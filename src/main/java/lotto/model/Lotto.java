@@ -1,5 +1,10 @@
 package lotto.model;
 
+import lotto.view.InputMoney;
+
+import camp.nextstep.edu.missionutils.Randoms;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public class Lotto {
@@ -16,5 +21,13 @@ public class Lotto {
         }
     }
 
-    // TODO: 추가 기능 구현
+    // 로또 구입 개수 연산
+    public int setPurchaseLotto() {
+        InputMoney tmpMoney = new InputMoney();
+
+        int money = tmpMoney.getMoney();
+        int lotto = money % 1000;
+
+        return lotto;
+    }
 }
