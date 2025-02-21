@@ -30,4 +30,10 @@ public class Lotto {
 
         return lotto;
     }
+
+    // 랜덤한 로또 발행 연산
+    public List<Integer> setLotto() {
+        List<Integer> lottoNums = Randoms.pickUniqueNumbersInRange(1,45,6);
+        return lottoNums;
+    }
 }
